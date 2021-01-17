@@ -1,0 +1,398 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* nav */
+
+body {
+  background-color: #f8fbff;
+}
+
+.nav {
+  height: 100px;
+  background-color: #FFF;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+.nav__wrapper {
+  max-width: 1000px;
+  height: 100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  padding: 0 20px;
+}
+
+.nav__logo {
+  align-self: center;
+  width: 170px;
+  overflow: hidden;
+}
+
+.nav__menu {
+  justify-content: space-between;
+  width: 400px;
+  align-self: center;
+  grid-column: 8/9;
+  display: none;
+}
+
+.nav__item {
+  list-style: none;
+}
+
+.sidenav__item a,
+.nav__item a {
+  text-decoration: none;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: #888;
+  transition: all .3s ease;
+}
+
+.sidenav__item a:hover,
+.nav__item a:hover {
+  color: #00b5b5;
+}
+
+.nav__hamburguer {
+  grid-column: 9/9;
+  width: 18px;
+  align-self: center;
+  cursor: pointer;
+}
+
+.nav__line {
+  height: 3px;
+  background-color: #888888;
+  transition: all 0.3s ease-in-out;
+  margin: 2px 0;
+}
+
+/* sidenav */
+
+.sidenav {
+  z-index: 1;
+  width: 320px;
+  height: 100%;
+  position: fixed;
+  background-color: #FFF;
+  top: 0;
+  left: -320px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.09);
+  transition: left 0.3s ease-in-out;
+}
+
+.sidenav--active {
+  left: 0;
+}
+
+.sidenav_wrapper {
+  position: relative;
+}
+
+.sidenav__menu {
+  margin-top: 60px;
+}
+
+.sidenav__item {
+  line-height: 45px;
+  border-top: 1px solid #d3d3d3;
+  padding-left: 20px;
+}
+
+.sidenav__item:last-child {
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.sidenav__close {
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+
+.sidenav__line {
+  background-color: #888888;
+  transform: rotate(45deg) translateY(2px);
+  width: 24px;
+  height: 2px;
+}
+
+.sidenav__line:last-child {
+  transform: rotate(-45deg) translateY(-1px);
+}
+
+/* section */
+
+.section {
+  max-width: 1000px;
+  height: 500px;
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 50px;
+
+}
+
+.section__title {
+  font-size: 48px;
+  font-family: 'Roboto';
+  font-weight: 300;
+  line-height: 58px;
+  color: #798bac;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section__box {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #888;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  margin: 0 auto;
+}
+
+/* table */
+
+table {
+  width: 100%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  text-align: left;
+  border-collapse: collapse;
+  font-family: 'Roboto';
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+thead {
+  background-color: #d4d4d4;
+  color: #272f3f;
+}
+
+thead th {
+  padding: 20px;
+}
+
+tbody td {
+  padding: 20px;
+  color: #3c4657;
+}
+
+tbody tr {
+  background-color: #FFF;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f0efef;
+}
+
+.buttons_button,
+.button {
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.14);
+  color: #fff;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 14px;
+  padding: 5px 20px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 100px;
+  text-align: center;
+  border: none;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.buttons_button a,
+.button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.button--red {
+  background-color: brown;
+}
+
+.button--blue {
+  background-color: #798bac;
+}
+
+.button--green {
+  background-color: rgb(103, 138, 68);
+}
+
+.buttons {
+  margin: 0px auto;
+  margin-bottom: 15px;
+}
+
+.buttons_button--green {
+  background-color: rgb(137, 177, 97);
+}
+
+/* alert */
+
+.alert {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  max-width: 350px;
+}
+
+.alert__box {
+  padding: 20px;
+  border-radius: 5px;
+  color: #fff;
+  font-family: 'Roboto';
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+.alert__box--active {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+
+.alert__box--green {
+  background-color: #00a7b5;
+}
+
+.alert__box--red {
+  background-color: brown;
+}
+
+/* form */
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+.form-group__label {
+  color: #798bac;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.9px;
+}
+
+.form-group__select {
+  appearance: none;
+  background: url(https://qualirede.com.br/wp-content/uploads/2019/08/arrow.svg) 98% / 32px no-repeat #eee;
+  border-width: 0;
+  color: #798bac;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  width: 100%;
+  border-radius: 31px;
+  background-color: #eff4fc;
+  margin-top: 5px;
+  padding: 16px 50px 16px 30px;
+}
+
+.form-group__input {
+  border-width: 0;
+  color: #798bac;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  width: 100%;
+  border-radius: 31px;
+  background-color: #eff4fc;
+  margin-top: 5px;
+  padding: 16px 50px 16px 30px;
+}
+
+.form-group__error {
+  color: #f00;
+  font-size: 16px;
+  font-weight: normal;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.9px;
+}
+
+.form-group__button {
+  width: 100%;
+  cursor: pointer;
+  background-color: #f9a251;
+  color: #ffffff !important;
+  border-radius: 33px !important;
+  font-family: Roboto !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  padding: 13px 40px !important;
+  border-width: 0 !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.form-group__button:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.14) !important;
+  background-color: #e6842a !important;
+}
+
+
+@media screen and (max-width: 500px) {
+  .alert {
+    position: fixed;
+    /* z-index: 1;  */
+    top: 10%;
+    right: auto;
+    left: 50%;
+    width: 320px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  table {
+    box-shadow: none;
+  }
+
+  .table thead {
+    display: none;
+  }
+
+  table, table tbody, table tr, table td {
+    display: block;
+    width: 100%;
+  }
+
+  table td {
+    border-bottom: 1px solid #cdd6e7;
+    text-align: right;
+  }
+
+  table tr {
+    margin-bottom: 50px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14);
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 30%;
+    padding-left: 15px;
+    font-weight: Bold;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav__menu {
+    display: flex;
+  }
+
+  .nav__hamburguer {
+    display: none;
+  }
+}
